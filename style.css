@@ -1,0 +1,237 @@
+* {
+   box-sizing: border-box;
+   font-family: "Roboto", sans-serif;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   background: rgb(2, 0, 36);
+   background: rgb(0, 212, 255);
+   background: linear-gradient(30deg,
+         rgba(0, 212, 255, 1) 20%,
+         rgba(121, 9, 62, 1) 69%,
+         rgba(2, 0, 36, 1) 100%);
+}
+
+.grid-container {
+   height: 100vh;
+
+   border: 1px solid black;
+   padding: 1em;
+   display: grid;
+   grid-template-columns: repeat(4, fr);
+   grid-template-rows: 1fr 1fr 1fr 2fr 1fr 0.5fr;
+   grid-template-areas:
+      "header header header header"
+      "main main aside aside"
+      "main main aside aside"
+      "main main aside aside"
+      "botones botones aside aside"
+      "footer footer footer footer";
+   column-gap: 0.5em;
+   row-gap: 0.4em;
+}
+header {
+   grid-area: header;
+}
+.logo {
+   position: relative;
+}
+
+
+h1 {
+   
+   text-align: center;
+   text-transform: uppercase;
+   color: antiquewhite;
+ }
+
+main {
+   grid-area: main;
+   border-radius: 15px;
+}
+textarea {
+   width: 100%;
+   height: 100%;
+   font-size: 24px;
+   text-align: center;
+   border-radius: 15px;
+   resize: none;
+
+}
+aside {
+   background-color: aqua;
+   grid-area: aside;
+   text-align: center;
+   border-radius: 15px;
+}
+.figura{
+   width: 50%;
+   height: 50%;
+   
+}
+
+
+.mensajearea{
+   overflow: hidden;
+   border-radius: 0;
+   border: 0;
+   height: 150px;
+   
+   
+   
+}
+.botones {
+   grid-area: botones;
+   background-color: blueviolet;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+.encriptar {
+   width: 150px;
+   height: 50px;
+   border-radius: 10px;
+   font-weight: bold;
+}
+
+.desencriptar {
+   width: 150px;
+   height: 50px;
+   border-radius: 10px;
+   font-weight: bold;
+}
+
+.borrar{
+   width: 150px;
+   height: 50px;
+   border-radius: 10px;
+   font-weight: bold;
+}
+
+.mensaje {
+   font-size: 25px;
+   font-weight: bold;
+}
+
+.mensajeDos {
+   font-size: 20px;
+   font-style: italic;
+}
+
+.copiar {
+   width: 150px;
+   height: 50px;
+   border-radius: 10px;
+   font-weight: bold;
+}
+
+footer {
+   background-color: coral;
+   grid-area: footer;
+   font-size: small;
+}
+
+.pie {
+   text-align: center;
+}
+
+.barra {
+   width: 700px;
+   height: 500px;
+}
+
+
+html.dark-mode{
+   filter: invert(100%);
+ }
+ html.dark-mode img {
+   filter: invert(100%);
+ }
+
+@media screen and (max-width: 767px) {
+   .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 2fr 2fr 2fr 1fr;
+      grid-template-areas:
+         "header header header header"
+         "main main main main"
+         "botones botones botones botones"
+         "aside aside aside aside"
+         "footer footer footer footer";
+   }
+
+   .logo {
+      width: 20px;
+      float: right;
+   }
+
+   .titulo {
+      font-size: 15px;
+      position: relative;
+      
+   }
+
+   main {
+      height: 200px;
+      border-radius: 10px;
+   }
+
+   textarea {
+      font-size: 20px;
+      text-align: center;
+      border-radius: 15px;
+   }
+
+   .botones {
+      grid-area: botones;
+      background-color: transparent;
+   }
+.desencriptar{
+   width: 100px;
+}
+.encriptar{
+   width: 100px;
+}
+   .borrar{
+      width: 100px;
+      border-radius: 15px;
+   }
+
+   aside {
+      background-color: aqua;
+      border-radius: 10px;
+      height: 300px;
+      
+   }
+
+
+   .mensaje {
+      font-size: 20px;
+     
+       }
+   .mensajearea{
+      font-size: 15px;
+      text-align: center;
+      height: 70px;
+      
+   }
+
+   .mensajeDos {
+      font-size: 15px;
+      margin: 5px;
+   }
+   .copiar{
+     height: 30px;
+   }
+   
+   footer {
+      background-color: transparent;
+      
+   }
+
+   .pie {
+      color: whitesmoke;
+   }
+}
