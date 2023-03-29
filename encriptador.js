@@ -56,13 +56,13 @@ function copiar() {
 }
 function cambioImagen(){
     let imagen = document.getElementById("figuraprincipal");
-    imagen.src = "/img/panteraSinFondo.png"
+    imagen.src = "img/panteraSinFondo.png"
     
     }
 
 function cambioImagen2(){
         let imagen = document.getElementById("figuraprincipal");
-        imagen.src = "/img/inspectorsin fondo.png"
+        imagen.src = "img/inspectorsin fondo.png"
         imagen.style.width="50%"
         imagen.style.height="50%"
 
